@@ -12,7 +12,6 @@ const Header = (props) => {
             <LeftIconGroup />
             <CentralMessage pseudo={pseudo} message={message} />
             {children}
-            
         </div>
     )
 }
