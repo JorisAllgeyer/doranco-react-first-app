@@ -1,3 +1,4 @@
 .maDiv {
-    color: blue;
+    background-color: lightblue;
+    min-height: 50px;
 }
