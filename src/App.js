@@ -1,31 +1,27 @@
+import { useState } from 'react';
 import './App.css';
+import ColorBox from './ColorBox/ColorBox';
 import Layout from './Layout/Layout';
+import { containerClass, headerContent, menuContent, colorsChannel } from './mockData';
 
 function App() {
-    const containerClass = "App";
 
-    const headerContent = {
-        user: {
-            firstname: "Joe"
-        },
-        content: {
-            greetingMessage: "Hello, "
-        }
-    }
-
-    const menuContent = [
-        { background: 'green', name: "menu Item 1", id: "menuItem1" },
-        { background: 'violet', name: "menu Item 2", id: "menuItem2" },
-        { background: 'blue', name: "menu Item 3", id: "menuItem3" }
-    ]
+    // Compteur
+    const [compteur, setCompteur] = useState(0);
+    const incrementHandler = () => setCompteur(compteur + 1);
+    const decrementHandler = () => setCompteur(compteur - 1);
 
     return (
         <div className={containerClass}>
             <Layout menuContent={menuContent}
                 headerContent={headerContent}>
 
-                {/* <CentralPanel></CentralPanel> */}
-                <div>contenu</div>
+                {/* <div>
+                    <button onClick={incrementHandler}>+</button>
+                    <button onClick={decrementHandler}>-</button>
+                    <span>{compteur}</span>
+                </div> */}
+                <ColorBox colorsChannel={colorsChannel} />
             </Layout>
         </div>
     );

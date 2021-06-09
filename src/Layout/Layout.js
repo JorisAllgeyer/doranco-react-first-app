@@ -28,5 +28,5 @@ const listKeyValues = {
     key2: "value2",
     key3: "value3",
 }
-{ ...listKeyValues}
+<Component { ...listKeyValues} />
 */
